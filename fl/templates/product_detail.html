@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product page</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+    <p>{{ product.sku }}</p>
+    <a href="{{ product.sku }}"><button>Go to {{ product.name }}</button></a>
+    <a href="/"><button>Go back to home</button></a>
+    <a href="/{{ product.category }}"><button>Go back to category</button></a>
+    <h2>Product Details:</h2>
+    <ul>
+        <li>Size: {{ product.Size }}</li>
+        <li>Weight: {{ product.Weight }}</li>
+        <li>Capacity: {{ product.Capacity }}</li>
+        <li>Material: {{ product.Material }}</li>
+        <li>Non-slip Legs: {{ product.Non_slip_legs }}</li>
+        <li>Category: {{ product.category }}</li>
+        <li>Last Scraped Date: {{ product.LastScrappeddate }}</li>
+        <li>Updated Date: {{ product.Updateddate }}</li>
+        <li>Created Date: {{ product.Createddate }}</li>
+        <li>Status: {{ product.Status }}</li>
+    </ul>  
+</body>
+</html>

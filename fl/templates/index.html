@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Home Page</title>
+</head>
+<body>
+    {% for category in categorys %}
+        <h1>{{ category}}</h1>
+        <a href="{{ category }}"><button>Go to {{ category }}</button></a>
+       
+    {% endfor %}
+    
+</body>
+</html>
