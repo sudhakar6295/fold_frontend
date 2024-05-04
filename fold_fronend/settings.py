@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  # Change this to 'django.db.backends.postgresql', 'django.db.backends.sqlite3', or 'django.db.backends.oracle' depending on your database
         'NAME': 'fold',  # Replace 'fold' with your database name
         'USER': 'root',  # Replace 'fold' with your database username
-        'PASSWORD': 'sudhakar',  # Replace 'XLqV6yPnwklZvNVL' with your database password
+        'PASSWORD': 'XLqV6yPnwklZvNVL',  # Replace 'XLqV6yPnwklZvNVL' with your database password
         'HOST': 'localhost', #'170.239.84.29',  # Replace '170.239.84.29' with your database host
         #'PORT': '22222',  # Replace '22222' with your database port
     }
