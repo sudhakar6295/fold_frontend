@@ -72,11 +72,11 @@
     
             </div>
             <div class="topnav">
-              <form action="{% url 'search' %}" method="GET">
-                <input type="text" name="query" placeholder="Search..">
-                <button style="background-color: chartreuse;" type="submit">Search</button>
-            </form>
-            </div>
+              <form id="searchForm" action="{% url 'search' %}" method="GET" onsubmit="return validateSearch()">
+                  <input type="text" id="searchInput" name="query" placeholder="Search..">
+                  <button style="background-color: chartreuse;" type="submit">Search</button>
+              </form>
+          </div>
     </div>
         </nav>
    <section id="categories">
@@ -87,9 +87,11 @@
                   {% load static %}
                     <div class="card-body">
                       <img class="product-image" src="{% static 'images/' %}{{ product.main_image_url }}" alt="Product Image">
-                      <h2><a href="/ds/products/{{ item.ruta }}" target="_blank">{{ item.nombreProducto }}</a></h2>
+
                         <!-- <h5 >{{category}} </h5> -->
                         <h1 class="card-title" style="font-size: 15px;font-family: 'Times New Roman', Times, serif;">{{ product.name }}</h1>
+                        <h1 class="card-title" style="font-size: 15px;font-family: 'Times New Roman', Times, serif;">SKU:{{ product.sku }}</h1>
+                        <h1 class="card-title" style="font-size: 15px;font-family: 'Times New Roman', Times, serif;">Price:{{ product.price }}</h1>
                         <a href="{{ product.sku }}">Go to {{ product.name }}</a>
                         
                     </div>
@@ -125,6 +127,17 @@
         <li class="page-item"><a class="page-link" href="?page={{ page.paginator.num_pages }}">Last &raquo;</a></li>
         {% endif %}
     </ul>
-  </nav>      
+  </nav>  
+  
+  <script>
+    function validateSearch() {
+        var searchInput = document.getElementById('searchInput').value;
+        if (searchInput.trim() === '') {
+            alert('Please enter a search query.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
 </body>
 </html>

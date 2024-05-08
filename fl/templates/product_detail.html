@@ -124,12 +124,11 @@
     
             </div>
             <div class="topnav">
-                <form action="{% url 'search' %}" method="GET">
-                    <input type="text" name="query" placeholder="Search..">
+                <form id="searchForm" action="{% url 'search' %}" method="GET" onsubmit="return validateSearch()">
+                    <input type="text" id="searchInput" name="query" placeholder="Search..">
                     <button style="background-color: chartreuse;" type="submit">Search</button>
                 </form>
-                
-                </div>
+            </div>
 
     </div>
         </nav>
@@ -232,6 +231,17 @@
         });
         var newIndex = (currentIndex + 1) % previewImages.length;
         displayImage(previewImages[newIndex].getAttribute('data-image'));
+    }
+</script>
+
+<script>
+    function validateSearch() {
+        var searchInput = document.getElementById('searchInput').value;
+        if (searchInput.trim() === '') {
+            alert('Please enter a search query.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
     }
 </script>
 
