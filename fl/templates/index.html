@@ -36,7 +36,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <li class="nav-item">
-                  <a style="color: white;" class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  <a style="color: white;" class="nav-link" href="/fl">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a  style="color: white;"class="nav-link" href="#">Shop</a>
@@ -52,8 +52,10 @@
             </div>
             <div class="topnav">
                 
-                <input type="text" placeholder="Search..">
-                <Button style="background-color: chartreuse;" type="button">Search</Button>
+                <form action="{% url 'search' %}" method="GET">
+                  <input type="text" name="query" placeholder="Search..">
+                  <button style="background-color: chartreuse;" type="submit">Search</button>
+              </form>
                 </div>
     </div>
   </nav>
