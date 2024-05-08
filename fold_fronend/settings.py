@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Change this to 'django.db.backends.postgresql', 'django.db.backends.sqlite3', or 'django.db.backends.oracle' depending on your database
         'NAME': 'fold',  # Replace 'fold' with your database name
-        'USER': 'fold',  # Replace 'fold' with your database username
-        'PASSWORD': 'XLqV6yPnwklZvNVL',  # Replace 'XLqV6yPnwklZvNVL' with your database password
+        'USER': 'root',  # Replace 'fold' with your database username
+        'PASSWORD': 'sudhakar',  # Replace 'XLqV6yPnwklZvNVL' with your database password
         'HOST': 'localhost', #'170.239.84.29',  # Replace '170.239.84.29' with your database host
         #'PORT': '22222',  # Replace '22222' with your database port
     }
@@ -124,3 +125,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]

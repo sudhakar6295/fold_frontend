@@ -5,7 +5,7 @@ def fetch_categories():
     return unique_categories
 
 def fetch_products(category):
-    products = Product.objects.filter(category=category).values('name', 'sku')
+    products = Product.objects.filter(category=category).values('name', 'sku','main_image_url')
     return products
 
 def fetch_product_detail(sku):
