@@ -176,6 +176,18 @@
         {% if product.Capacity %}
         <p><strong>Capacity:</strong>{{ product.Capacity }}</p>
         {%endif%}
+        {% if product.color %}
+        <p><strong>Color:</strong>{{ product.color }}</p>
+        {%endif%}
+        {% if product.tube_diameter %}
+        <p><strong>Tube Diameter:</strong>{{ product.tube_diameter }}</p>
+        {%endif%}
+        {% if product.maximum_height %}
+        <p><strong>Maximum Height:</strong>{{ product.maximum_height }}</p>
+        {%endif%}
+        {% if product.base %}
+        <p><strong>Base:</strong>{{ product.base }}</p>
+        {%endif%}
         {% if product.Material %}
         <p><strong>Material:</strong> {{ product.Material }}</p>
         {%endif%}

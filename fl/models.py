@@ -11,6 +11,7 @@ class Product(models.Model):
     tube_diameter = models.CharField(max_length=50,default=None)
     maximum_height = models.CharField(max_length=50,default=None)
     base = models.CharField(max_length=50,default=None)
+    color = models.CharField(max_length=50,default=None)
     Capacity = models.CharField(max_length=50)
     Material = models.CharField(max_length=100)
     Non_slip_legs = models.CharField(max_length=5)
