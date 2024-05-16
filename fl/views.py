@@ -8,15 +8,19 @@ def index(request):
 
 def category_view(request, category,page=1):
     products = fetch_products(category)
+    total_products = len(products)
     page = request.GET.get('page', 1)
-    paginator = Paginator(products, 20)
+    page_count = 16
+    paginator = Paginator(products, 16)
     try:
         items = paginator.page(page)
+        page_count = len(items)
     except PageNotAnInteger:
         items = paginator.page(1)
+        page_count = len(items)
     except EmptyPage:
         items = paginator.page(paginator.num_pages)
-    return render(request, 'category.html',{'products':items,'page':items})
+    return render(request, 'category.html',{'products':items,'page':items,'page_count':page_count,'total_products':total_products})
 
 
 def product_detail(request, category,sku):

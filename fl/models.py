@@ -5,6 +5,7 @@ class Product(models.Model):
     url = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    original_price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
     Size = models.CharField(max_length=50)
     Weight = models.CharField(max_length=50)
