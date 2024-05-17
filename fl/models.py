@@ -22,6 +22,7 @@ class Product(models.Model):
     Createddate = models.DateTimeField(auto_now_add=True)
     Status = models.CharField(max_length=50)
     main_image_url = models.CharField(max_length=255)
+    Seat_Height = models.CharField(max_length=50)
     class Meta:
         db_table = 'product'
 

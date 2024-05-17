@@ -179,6 +179,10 @@
         {% if product.Capacity %}
         <p><strong>Capacity:</strong>{{ product.Capacity }}</p>
         {%endif%}
+        {% if product.Seat_Height %}
+        <p><strong>Seat Height:</strong>{{ product.Seat_Height }}</p>
+        {%endif%}
+
         {% if product.color %}
         <p><strong>Color:</strong>{{ product.color }}</p>
         {%endif%}
@@ -212,6 +216,8 @@
         {% if product.Status %}
         <p><strong>Status:</strong> {{ product.Status }}</p>
         {%endif%}
+
+
     </div>
 </div>   
 <script>
