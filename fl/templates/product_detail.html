@@ -137,7 +137,7 @@
         <h1>{{ product.name }}</h1>
         <p>{{ product.description }}</p>
         {% if product.original_price %}
-        <p> <b>Original Price : </b>{{ product.original_price }}</p>
+        <p> <b>Original Price : </b><s>{{ product.original_price }}</s></p>
         {% endif %}
         {% if product.price %}
         <p> <b>Product Price : </b>{{ product.price }}</p>
