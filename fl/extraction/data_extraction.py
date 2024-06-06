@@ -11,7 +11,18 @@ def fetch_products(category):
 def fetch_product_detail(sku):
     product = Product.objects.filter(sku=sku).values().first()
     images = Image.objects.filter(sku=sku).values_list('image_url', flat=True)
-    return product,images
+    stock_val = None
+    if product and product.get('stock'):
+        stock_str = product.get('stock')
+        stock = int(stock_str)
+        
+        if stock == 0:
+            stock_val = 'Agotado'
+        elif stock > 0  and stock <= 10:
+            stock_val = 'Pocas Unidades'
+        elif stock > 10:
+            stock_val = 'Disponible'
+    return product,images,stock_val
 
 def search_product(search_variable):
     if not search_variable:
@@ -24,4 +35,16 @@ def search_product(search_variable):
     else:
         return None, None
     images = Image.objects.filter(sku=sku).values_list('image_url', flat=True)
-    return product,images
+    stock_val = None
+    if product and product.get('stock'):
+        stock_str = product.get('stock')
+        stock = int(stock_str)
+        
+        if stock == 0:
+            stock_val = 'Agotado'
+        elif stock > 0  and stock <= 10:
+            stock_val = 'Pocas Unidades'
+        elif stock > 10:
+            stock_val = 'Disponible'
+
+    return product,images,stock_val

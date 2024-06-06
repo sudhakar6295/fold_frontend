@@ -25,15 +25,15 @@ def category_view(request, category,page=1):
 
 def product_detail(request, category,sku):
     
-    product,images = fetch_product_detail(sku)
-    return render(request, 'product_detail.html',{'product':product,'images':images})
+    product,images,stock_val = fetch_product_detail(sku)
+    return render(request, 'product_detail.html',{'product':product,'images':images,'stock_val':stock_val})
 
 def search(request):
     if request.method == 'GET' and 'query' in request.GET:
         query = request.GET['query']
-        product, images = search_product(query)
+        product, images,stock_val = search_product(query)
         if product :
-            return render(request, 'product_detail.html', {'product': product, 'images': images})
+            return render(request, 'product_detail.html', {'product': product, 'images': images,'stock_val':stock_val})
     
     categorys = fetch_categories()
     return render(request, 'index.html', {'categorys': categorys})
