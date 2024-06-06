@@ -141,6 +141,9 @@
         {% endif %}
         <p> <b>Product Price : </b>{{ product.price }}</p>
         <p> <b>Product SKU :</b>{{ product.sku }}</p>
+        {% if product.stock %} 
+        <p> <b>Stock :</b>{{ product.stock }}</p>
+        {%endif%}
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
