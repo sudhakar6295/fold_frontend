@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'fold',  # Replace 'fold' with your database name
         'USER': 'fold',  # Replace 'fold' with your database username
         'PASSWORD': 'XLqV6yPnwklZvNVL', 
-        'HOST': 'local', #'170.239.84.29',  # Replace '170.239.84.29' with your database host
+        'HOST': 'localhost', #'170.239.84.29',  # Replace '170.239.84.29' with your database host
         'PORT': '22222',  # Replace '22222' with your database port
     }
 }
