@@ -24,6 +24,7 @@ class Product(models.Model):
     Status = models.CharField(max_length=50)
     main_image_url = models.CharField(max_length=255)
     Seat_Height = models.CharField(max_length=50)
+    Exhausted = models.CharField(max_length=50)
     class Meta:
         db_table = 'product'
 
