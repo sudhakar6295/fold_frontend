@@ -139,7 +139,9 @@
         {% if product.original_price %}
         <p> <b>Product Price : </b>{{ product.original_price }}</p>
         {% endif %}
+        {% if product.price %}
         <p> <b>Product Price : </b>{{ product.price }}</p>
+        {% endif %}
         <p> <b>Product SKU :</b>{{ product.sku }}</p>
         {% if product.stock %} 
         <p> <b>Stock :</b>{{ product.stock }}</p>
