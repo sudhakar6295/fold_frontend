@@ -182,9 +182,11 @@
         {% if product.Seat_Height %}
         <p><strong>Seat Height:</strong>{{ product.Seat_Height }}</p>
         {%endif%}
-
         {% if product.color %}
         <p><strong>Color:</strong>{{ product.color }}</p>
+        {%endif%}
+        {% if product.Contains %}
+        <p><strong>Contains:</strong>{{ product.Contains }}</p>
         {%endif%}
         {% if product.tube_diameter %}
         <p><strong>Tube Diameter:</strong>{{ product.tube_diameter }}</p>
