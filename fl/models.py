@@ -25,6 +25,8 @@ class Product(models.Model):
     main_image_url = models.CharField(max_length=255)
     Seat_Height = models.CharField(max_length=50)
     stock = models.CharField(max_length=50)
+    Height = models.CharField(max_length=50)
+    Packing = models.CharField(max_length=50)
     class Meta:
         db_table = 'product'
 
