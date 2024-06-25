@@ -8,7 +8,7 @@ class Product(models.Model):
     original_price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
     Contains = models.TextField()
-    Size = models.CharField(max_length=50)
+    Size = models.CharField(max_length=200)
     Weight = models.CharField(max_length=50)
     tube_diameter = models.CharField(max_length=50)
     maximum_height = models.CharField(max_length=50)
