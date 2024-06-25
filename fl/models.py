@@ -27,6 +27,7 @@ class Product(models.Model):
     stock = models.CharField(max_length=50)
     Height = models.CharField(max_length=50)
     Packing = models.CharField(max_length=50)
+    Observations = models.CharField(max_length=50)
     class Meta:
         db_table = 'product'
 
