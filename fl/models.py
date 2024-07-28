@@ -28,6 +28,8 @@ class Product(models.Model):
     Height = models.CharField(max_length=50)
     Packing = models.CharField(max_length=50)
     Observations = models.CharField(max_length=50)
+    Specification = models.JSONField()
+    Specification_html = models.TextField()
     class Meta:
         db_table = 'product'
 
