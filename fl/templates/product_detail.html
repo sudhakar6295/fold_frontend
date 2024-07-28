@@ -179,6 +179,21 @@
     <div class="content-container">
         <strong><h2>Product Information</h2></strong>  
         <div> <p>{{ product.Specification_html|safe }}</p></div>
+        {% if product.category %}
+        <p><strong>Category:</strong> {{ product.category }}</p>
+        {%endif%}
+        {% if product.LastScrappeddate %}
+        <p><strong>Last Scraped Date:</strong> {{ product.LastScrappeddate }}</p>
+        {%endif%}
+        {% if product.Updateddate %}
+        <p><strong>Updated Date:</strong> {{ product.Updateddate }}</p>
+        {%endif%}
+        {% if product.Createddate %}
+        <p><strong>Created Date:</strong> {{ product.Createddate }}</p>
+        {%endif%}
+        {% if product.Status %}
+        <p><strong>Status:</strong> {{ product.Status }}</p>
+        {%endif%}
 
 
     </div>
