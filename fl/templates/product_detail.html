@@ -178,57 +178,7 @@
     </div>  
     <div class="content-container">
         <strong><h2>Product Information</h2></strong>  
-        {% if product.Size %} 
-        <p><strong>Size:</strong> {{ product.Size }}</p>
-        {%endif%}
-        {% if product.Weight %}
-        <p><strong>Weight:</strong>{{ product.Weight }}</p>
-        {%endif%}
-        {% if product.Capacity %}
-        <p><strong>Capacity:</strong>{{ product.Capacity }}</p>
-        {%endif%}
-        {% if product.Seat_Height %}
-        <p><strong>Seat Height:</strong>{{ product.Seat_Height }}</p>
-        {%endif%}
-        {% if product.color %}
-        <p><strong>Color:</strong>{{ product.color }}</p>
-        {%endif%}
-        {% if product.Contains %}
-        <p><strong>Contains:</strong>{{ product.Contains }}</p>
-        {%endif%}
-        {% if product.tube_diameter %}
-        <p><strong>Tube Diameter:</strong>{{ product.tube_diameter }}</p>
-        {%endif%}
-        {% if product.Observations %}
-        <p><strong>Observations:</strong>{{ product.Observations }}</p>
-        {%endif%}
-        {% if product.maximum_height %}
-        <p><strong>Maximum Height:</strong>{{ product.maximum_height }}</p>
-        {%endif%}
-        {% if product.base %}
-        <p><strong>Base:</strong>{{ product.base }}</p>
-        {%endif%}
-        {% if product.Material %}
-        <p><strong>Material:</strong> {{ product.Material }}</p>
-        {%endif%}
-        {% if product.Non_slip_legs %}
-        <p><strong>Non-slip Legs:</strong>{{ product.Non_slip_legs }}</p>
-        {%endif%}
-        {% if product.category %}
-        <p><strong>Category:</strong> {{ product.category }}</p>
-        {%endif%}
-        {% if product.LastScrappeddate %}
-        <p><strong>Last Scraped Date:</strong> {{ product.LastScrappeddate }}</p>
-        {%endif%}
-        {% if product.Updateddate %}
-        <p><strong>Updated Date:</strong> {{ product.Updateddate }}</p>
-        {%endif%}
-        {% if product.Createddate %}
-        <p><strong>Created Date:</strong> {{ product.Createddate }}</p>
-        {%endif%}
-        {% if product.Status %}
-        <p><strong>Status:</strong> {{ product.Status }}</p>
-        {%endif%}
+        <div> <p>{{ product.Specification_html|safe }}</p></div>
 
 
     </div>
